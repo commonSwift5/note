@@ -1,18 +1,18 @@
 module.exports = {
-	title: 'happy-cooking',
-	base: '/happy-cooking/',
+	title: 'function',
+	base: '/function/',
 	themeConfig: {
 		nav: [
 			{ text: '主页', link: '/' },
-			{ text: '饮料', link: '/drinkDocs/water.md' }
+			{ text: '饮料', link: '/method/' }
 		],
 		sidebar: [
 			{
-				title: '饮料', // 必要的
-				path: '/drinkDocs/water', // 可选的, 标题的跳转链接，应为绝对路径且必须存在
+				title: '字符串', // 必要的
+				path: '/method/', // 可选的, 标题的跳转链接，应为绝对路径且必须存在
 				collapsable: false, // 可选的, 默认值是 true,
 				sidebarDepth: 1, // 可选的, 默认值是 1
-				children: ['/drinkDocs/jfx/jfx.md', '/drinkDocs/百香果橙子特调/百香果橙子特调']
+				children: ['/method/String/String.md']
 			},
 			{
 				title: '目录',
