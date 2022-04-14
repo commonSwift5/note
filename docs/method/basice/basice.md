@@ -1,6 +1,12 @@
 ### 数据类型转换
 ### typeof 
+
+   * 简单数据类型有 string number boolean undefined null  (null是空对象  类型是object)
+   * typeof 能判断的类型: string number boolean undefined object function 
+
    ```js
+   var a= function() { 
+   }
     console.log(typeof '1231') //string
     console.log(typeof 1312) // number
     console.log(typeof [1, 2]) //object
@@ -9,6 +15,7 @@
     console.log(typeof undefined) // undefined
     console.log(typeof NaN) //number
     console.log(typeof true) //Boolean
+    console.log(typefo a) //function
     // 注意 typeof 不能判断是不是数组 
    ```
 
