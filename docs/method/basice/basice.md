@@ -32,3 +32,11 @@ Number()  自能放数字类型字符 ，不能放abc 否则返回NaN
 #### 转为字符串
 * 数字转为字符串
 `toString()`
+
+
+### 输入与输出
+* 输出
+`document.write("要输出的内容")`
+`alert('要输出的内容)`
+* 输入
+`var a=  prompt("提示")`

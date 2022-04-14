@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		1、 有这样一个字符串"http://www.baidu.com?a=1&b=2&b=4& b=222&d=xxx",要求转化成 {"a":1,"b":[2,222],"d":xxx}
+		<script>
+			var str = 'http://www.baidu.com?a=1&b=2&b=4&b=222&d=xxx'
+			var str2 = str.split('?')[1]
+			var arr2 = str2.split('&')
+			var obj = {}
+			arr2.forEach(item => {
+				var arr = item.split('=')
+				if (obj[arr[0]]) {
+					if (obj[arr[0]].constructor === Array) {
+						ar = [...obj[arr[0]], arr[1]]
+						obj[arr[0]] = ar
+					} else {
+						var ar = []
+						ar.push(obj[arr[0]], arr[1])
+						obj[arr[0]] = ar
+					}
+				} else {
+					obj[arr[0]] = arr[1]
+				}
+			})
+			console.log(obj)
+		</script>
+
+		2、数字重新排列的最大值 编写一个函数，接受一个数字后重新排列，返回一个尽可能大的新数字例： "23953" -> "95332"
+		"12743" -> "74321" "21" -> "21"
+		<script>
+			/**
+			 *
+			 * **/
+			function Sort(number) {
+				var arr = [...`${number}`].map(el => parseInt(el))
+				var newNum = arr.sort((a, b) => b - a)
+				return newNum.join('')
+			}
+			Sort(1234)
+		</script>
+
+		<style>
+			ul {
+				width: 300px;
+				border: 1px solid red;
+				overflow: hidden;
+				padding: 0;
+			}
+			li {
+				width: 50px;
+				list-style: none;
+				float: left;
+				border: 1px solid blue;
+			}
+		</style>
+		<ul>
+			<li>登录</li>
+			<li>注册</li>
+			<li>帮助</li>
+		</ul>
+	</body>
+</html>
