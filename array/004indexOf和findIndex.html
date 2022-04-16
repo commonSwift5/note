@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<script>
+			var arr = [123, 235, 4, 6]
+			var res = arr.indexOf(123)
+			console.log(res) // 0
+
+			// 第二参数 表示开始的索引
+			var res2 = arr.indexOf(123, 1)
+			console.log(res2) // -1
+			/**
+			 * findIndex()
+			 *
+			 * */
+			var arr2 = [1, 2, 4, 5]
+			var index = arr2.findIndex(item => item > 3)
+			var index2 = arr2.findIndex(item => item > 6)
+			console.log(index) //2 只放回满足条件的第一个元素索引
+			console.log(index2) // -1
+
+			/**
+			 * find()
+			 *find() 方法返回数组中满足提供的测试函数的第一个元素的值。否则返回 undefined
+			 * **/
+			var result = arr2.find(item => item > 3)
+			var res3 = arr2.find(item => item > 6)
+			console.log(result) // 4
+			console.log(res3) //undefined
+		</script>
+	</body>
+</html>

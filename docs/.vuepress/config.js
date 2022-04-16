@@ -4,23 +4,12 @@ module.exports = {
 	themeConfig: {
 		nav: [
 			{ text: '主页', link: '/' },
-			{ text: '饮料', link: '/method/' }
+			{ text: '数组', link: '/string/' },
+			{ text: '数组', link: '/array/' }
 		],
-		sidebar: [
-			{
-				title: '字符串', // 必要的
-				path: '/method/', // 可选的, 标题的跳转链接，应为绝对路径且必须存在
-				collapsable: false, // 可选的, 默认值是 true,
-				sidebarDepth: 1, // 可选的, 默认值是 1
-				children: ['/method/String/String.md']
-			},
-			{
-				title: '目录',
-				children: [
-					/* ... */
-				],
-				initialOpenGroupIndex: -1 // 可选的, 默认值是 0
-			}
-		]
+		sidebar: {
+			'/string/': ['string.md'],
+			'/array/': ['array.md', '01array.md']
+		}
 	}
 }
