@@ -1,10 +1,10 @@
 module.exports = {
 	title: 'function',
-	base: '/function/',
+	base: '/note/',
 	themeConfig: {
 		nav: [
 			{ text: '主页', link: '/' },
-			{ text: '数组', link: '/string/' },
+			{ text: '字符串', link: '/string/' },
 			{ text: '数组', link: '/array/' }
 		],
 		sidebar: {
