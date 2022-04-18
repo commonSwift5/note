@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>混入</title>
+	</head>
+	<body>
+		<script>
+			// 正如你所见，行为是可以通过继承来共享的。 然而，在有些情况下，继承不是最好的解决方案。
+			// 继承不适用于不相关的对象，比如 Bird 和 Airplane。 虽然它们都可以飞行，但是 Bird 并不是一种 Airplane，反之亦然。
+
+			let bird = {
+				name: 'Donald',
+				numLegs: 2
+			}
+
+			let boat = {
+				name: 'Warrior',
+				type: 'race-boat'
+			}
+
+			// 只修改这一行下面的代码
+			let glideMixin = obj => {
+				obj.glide = function () {}
+			}
+			glideMixin(bird)
+			glideMixin(boat)
+
+			// 使用混入 给两个对象 添加统一方法
+		</script>
+	</body>
+</html>

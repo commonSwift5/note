@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<script>
+			function Bird() {}
+
+			Bird.prototype.fly = function () {
+				return 'I am flying!'
+			}
+
+			function Penguin() {}
+			Penguin.prototype = Object.create(Bird.prototype)
+			Penguin.prototype.constructor = Penguin
+
+			// 只修改这一行下面的代码
+			Penguin.prototype.fly = function () {
+				return 'Alas, this is a flightless bird.'
+			}
+
+			// 只修改这一行上面的代码
+
+			let penguin = new Penguin()
+			console.log(penguin.fly())
+		</script>
+	</body>
+</html>

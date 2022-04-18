@@ -8,6 +8,36 @@
 	</head>
 	<body>
 		<script>
+			/**
+			 *
+			 *  方法二   利用Object 实现继承
+			 *
+			 * */
+
+			function Animal() {}
+
+			Animal.prototype = {
+				constructor: Animal,
+				eat: function () {
+					console.log('nom nom nom')
+				}
+			}
+
+			function Dog() {}
+
+			// 只修改这一行下面的代码
+			Dog.prototype = Object.create(Animal.prototype) //改变子构造函数原型 指向 新创建父对象的原型对象
+			// 相当于
+			// Dog.prototype = {
+			// 	constructor: Animal,
+			// 	eat: function () {
+			// 		console.log('nom nom nom')
+			// 	}
+			// }
+
+			Dog.prototype.constructor = Dog // 需要重新修改 constructor 指回构造函数
+			let beagle = new Dog()
+
 			// 属性继承
 			function Father(uname, age) {
 				this.uname = uname
