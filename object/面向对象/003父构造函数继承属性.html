@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<script>
+			// 属性继承
+			function Father(uname, age) {
+				this.uname = uname
+				this.age = age
+			}
+			Father.prototype.money = function () {
+				console.log('makeMoney')
+			}
+			function Son(uname, age) {
+				Father.call(this, uname, age)
+			}
+			var son = new Son('刘德华', 18)
+			console.log(son)
+
+			// 利用原型对象继承方法
+			Son.prototype = new Father()
+			// 利用对象修改了原型对象 不要忘记contructor 指回原型。
+			Son.prototype.constructor = Son
+			Son.prototype.exam = function () {
+				console.log('1111')
+			}
+		</script>
+	</body>
+</html>

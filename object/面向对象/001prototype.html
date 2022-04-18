@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<script>
+			function Dog(name) {
+				this.name = name
+			}
+			// 构造对象
+			const bm = new Dog('边牧')
+			console.log(bm.numLegs) //undefined
+			Dog.prototype.numLegs = 4
+			console.log(bm.numLegs) // 4  说明添加 原型属性还是要顺序的
+		</script>
+	</body>
+</html>
