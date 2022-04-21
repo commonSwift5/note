@@ -7,18 +7,17 @@
 		<title>Document</title>
 	</head>
 	<body>
-		<!-- 001  -->
 		<script>
-			function destroyer(arr) {
-				var len = arguments.length
-				for (let i = 1; i < len; i++) {
-					arguments[0] = arguments[0].filter(item => item !== arguments[i])
-				}
+			var str = 'jcjs'
+			var reg = /jc/
+			console.log(reg.test(str)) // true
+			var reg1 = /jj/
+			console.log(reg1.test(str)) //false
+			var reg2 = /cj/
+			console.log(reg2.test(str)) //true
 
-				return arguments[0]
-			}
-
-			const rs = destroyer([1, 2, 3, 1, 2, 3], 2, 3) // rs =[1,1]
+			var str2 = 'goodAfterYou'
+			var rs = str2.replace(/([a-z])([A-Z])/g, '$1 $2')
 		</script>
 	</body>
 </html>

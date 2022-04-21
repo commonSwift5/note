@@ -7,18 +7,13 @@
 		<title>Document</title>
 	</head>
 	<body>
-		<!-- 001  -->
 		<script>
-			function destroyer(arr) {
-				var len = arguments.length
-				for (let i = 1; i < len; i++) {
-					arguments[0] = arguments[0].filter(item => item !== arguments[i])
-				}
-
-				return arguments[0]
-			}
-
-			const rs = destroyer([1, 2, 3, 1, 2, 3], 2, 3) // rs =[1,1]
+			// exec()
+			const str = 'abcdabg abd'
+			const reg = /ab/g
+			console.log(reg.exec(str))
+			var matches = /(hello \S+)/.exec('This is a hello world!')
+			console.log(matches[1])
 		</script>
 	</body>
 </html>
