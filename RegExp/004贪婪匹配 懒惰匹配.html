@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<script>
+			var t = /t[a-z]*i/ //贪婪
+			var l = /t[a-z]*?i/ //懒惰
+
+			let text = '<h1>Winter is coming</h1>'
+			let myRegex = /<.*?>/ // 修改这一行
+			let result = text.match(myRegex) //<h1>
+		</script>
+	</body>
+</html>

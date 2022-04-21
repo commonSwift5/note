@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<script>
+			let quit = 'qu'
+			let noquit = 'qt'
+			let quRegex = /q(?=u)/ //先行断言
+			let qRegex = /q(?!u)/ //负向先行断言
+			let a = quit.match(quRegex)
+			let b = noquit.match(qRegex)
+		</script>
+	</body>
+</html>

@@ -14,6 +14,12 @@
 			console.log(reg.exec(str))
 			var matches = /(hello \S+)/.exec('This is a hello world!')
 			console.log(matches[1])
+			var chewieQuote = 'Aaaaaaaaaaaaaaaa'
+			// 只修改这一行下面的代码
+			let chewieRegex = /Aa*/g // 修改这一行
+			// 只修改这一行上面的代码
+
+			let result = chewieQuote.match(chewieRegex)
 		</script>
 	</body>
 </html>
