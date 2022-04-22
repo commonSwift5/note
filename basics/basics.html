@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>数据类型转换 | function</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    
+    <meta name="description" content="">
+    
+    <link rel="preload" href="/note/assets/css/0.styles.ba1ec7e7.css" as="style"><link rel="preload" href="/note/assets/js/app.452425e8.js" as="script"><link rel="preload" href="/note/assets/js/2.a421e645.js" as="script"><link rel="preload" href="/note/assets/js/12.2d7de8a6.js" as="script"><link rel="prefetch" href="/note/assets/js/10.6d977dc9.js"><link rel="prefetch" href="/note/assets/js/11.17972691.js"><link rel="prefetch" href="/note/assets/js/13.ddbd3b6b.js"><link rel="prefetch" href="/note/assets/js/14.3d85de69.js"><link rel="prefetch" href="/note/assets/js/15.68ca0a64.js"><link rel="prefetch" href="/note/assets/js/16.e8ae53a8.js"><link rel="prefetch" href="/note/assets/js/17.94115854.js"><link rel="prefetch" href="/note/assets/js/18.b71a7371.js"><link rel="prefetch" href="/note/assets/js/19.9f4a68a3.js"><link rel="prefetch" href="/note/assets/js/20.16df7e3f.js"><link rel="prefetch" href="/note/assets/js/3.d71e3132.js"><link rel="prefetch" href="/note/assets/js/4.b7d0708f.js"><link rel="prefetch" href="/note/assets/js/5.9e2f4ca7.js"><link rel="prefetch" href="/note/assets/js/6.c7b54f12.js"><link rel="prefetch" href="/note/assets/js/7.5a26e613.js"><link rel="prefetch" href="/note/assets/js/8.b9b162cd.js"><link rel="prefetch" href="/note/assets/js/9.d0eb4df8.js">
+    <link rel="stylesheet" href="/note/assets/css/0.styles.ba1ec7e7.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/note/" class="home-link router-link-active"><!----> <span class="site-name">function</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/note/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><a href="/note/basics/" class="nav-link router-link-active">
+  基础
+</a></div><div class="nav-item"><a href="/note/string/" class="nav-link">
+  字符串
+</a></div><div class="nav-item"><a href="/note/array/" class="nav-link">
+  数组
+</a></div><div class="nav-item"><a href="/note/object/" class="nav-link">
+  对象
+</a></div><div class="nav-item"><a href="/note/reg/" class="nav-link">
+  正则表达式
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/note/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><a href="/note/basics/" class="nav-link router-link-active">
+  基础
+</a></div><div class="nav-item"><a href="/note/string/" class="nav-link">
+  字符串
+</a></div><div class="nav-item"><a href="/note/array/" class="nav-link">
+  数组
+</a></div><div class="nav-item"><a href="/note/object/" class="nav-link">
+  对象
+</a></div><div class="nav-item"><a href="/note/reg/" class="nav-link">
+  正则表达式
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/note/basics/basics.html" aria-current="page" class="active sidebar-link">数据类型转换</a><ul class="sidebar-sub-headers"></ul></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h3 id="数据类型转换"><a href="#数据类型转换" class="header-anchor">#</a> 数据类型转换</h3> <h3 id="typeof"><a href="#typeof" class="header-anchor">#</a> typeof</h3> <ul><li>简单数据类型有 string number boolean undefined null  (null是空对象  类型是object)</li> <li>typeof 能判断的类型: string number boolean undefined object function</li></ul> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">var</span> <span class="token function-variable function">a</span><span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> 
+<span class="token punctuation">}</span>
+ console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">typeof</span> <span class="token string">'1231'</span><span class="token punctuation">)</span> <span class="token comment">//string</span>
+ console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">typeof</span> <span class="token number">1312</span><span class="token punctuation">)</span> <span class="token comment">// number</span>
+ console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">typeof</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token comment">//object</span>
+ console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">typeof</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token comment">// object</span>
+ console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">typeof</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token comment">//object</span>
+ console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">typeof</span> <span class="token keyword">undefined</span><span class="token punctuation">)</span> <span class="token comment">// undefined</span>
+ console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">typeof</span> <span class="token number">NaN</span><span class="token punctuation">)</span> <span class="token comment">//number</span>
+ console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">typeof</span> <span class="token boolean">true</span><span class="token punctuation">)</span> <span class="token comment">//Boolean</span>
+ console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>typefo a<span class="token punctuation">)</span> <span class="token comment">//function</span>
+ <span class="token comment">// 注意 typeof 不能判断是不是数组 </span>
+</code></pre></div><h3 id="转数字相关"><a href="#转数字相关" class="header-anchor">#</a> 转数字相关</h3> <ul><li>字符串转为数字
+<code>Number(数据)</code></li> <li>转化为整数
+<code>parseInt(string)</code></li> <li>转换为浮点数
+<code>parseFloat(string)</code></li> <li>区别
+Number()  自能放数字类型字符 ，不能放abc 否则返回NaN</li></ul> <h4 id="转为字符串"><a href="#转为字符串" class="header-anchor">#</a> 转为字符串</h4> <ul><li>数字转为字符串
+<code>toString()</code></li></ul> <h3 id="输入与输出"><a href="#输入与输出" class="header-anchor">#</a> 输入与输出</h3> <ul><li>输出
+<code>document.write(&quot;要输出的内容&quot;)</code> <code>alert('要输出的内容)</code></li> <li>输入
+<code>var a= prompt(&quot;提示&quot;)</code></li></ul></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/note/assets/js/app.452425e8.js" defer></script><script src="/note/assets/js/2.a421e645.js" defer></script><script src="/note/assets/js/12.2d7de8a6.js" defer></script>
+  </body>
+</html>

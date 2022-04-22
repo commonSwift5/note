@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>转化为数组 | function</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    
+    <meta name="description" content="">
+    
+    <link rel="preload" href="/note/assets/css/0.styles.ba1ec7e7.css" as="style"><link rel="preload" href="/note/assets/js/app.452425e8.js" as="script"><link rel="preload" href="/note/assets/js/2.a421e645.js" as="script"><link rel="preload" href="/note/assets/js/20.16df7e3f.js" as="script"><link rel="prefetch" href="/note/assets/js/10.6d977dc9.js"><link rel="prefetch" href="/note/assets/js/11.17972691.js"><link rel="prefetch" href="/note/assets/js/12.2d7de8a6.js"><link rel="prefetch" href="/note/assets/js/13.ddbd3b6b.js"><link rel="prefetch" href="/note/assets/js/14.3d85de69.js"><link rel="prefetch" href="/note/assets/js/15.68ca0a64.js"><link rel="prefetch" href="/note/assets/js/16.e8ae53a8.js"><link rel="prefetch" href="/note/assets/js/17.94115854.js"><link rel="prefetch" href="/note/assets/js/18.b71a7371.js"><link rel="prefetch" href="/note/assets/js/19.9f4a68a3.js"><link rel="prefetch" href="/note/assets/js/3.d71e3132.js"><link rel="prefetch" href="/note/assets/js/4.b7d0708f.js"><link rel="prefetch" href="/note/assets/js/5.9e2f4ca7.js"><link rel="prefetch" href="/note/assets/js/6.c7b54f12.js"><link rel="prefetch" href="/note/assets/js/7.5a26e613.js"><link rel="prefetch" href="/note/assets/js/8.b9b162cd.js"><link rel="prefetch" href="/note/assets/js/9.d0eb4df8.js">
+    <link rel="stylesheet" href="/note/assets/css/0.styles.ba1ec7e7.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/note/" class="home-link router-link-active"><!----> <span class="site-name">function</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/note/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><a href="/note/basics/" class="nav-link">
+  基础
+</a></div><div class="nav-item"><a href="/note/string/" class="nav-link router-link-active">
+  字符串
+</a></div><div class="nav-item"><a href="/note/array/" class="nav-link">
+  数组
+</a></div><div class="nav-item"><a href="/note/object/" class="nav-link">
+  对象
+</a></div><div class="nav-item"><a href="/note/reg/" class="nav-link">
+  正则表达式
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/note/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><a href="/note/basics/" class="nav-link">
+  基础
+</a></div><div class="nav-item"><a href="/note/string/" class="nav-link router-link-active">
+  字符串
+</a></div><div class="nav-item"><a href="/note/array/" class="nav-link">
+  数组
+</a></div><div class="nav-item"><a href="/note/object/" class="nav-link">
+  对象
+</a></div><div class="nav-item"><a href="/note/reg/" class="nav-link">
+  正则表达式
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/note/string/string.html" aria-current="page" class="active sidebar-link">转化为数组</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/note/string/string.html#转化为数组" class="sidebar-link">转化为数组</a></li><li class="sidebar-sub-header"><a href="/note/string/string.html#字符串截取" class="sidebar-link">字符串截取</a></li></ul></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="转化为数组"><a href="#转化为数组" class="header-anchor">#</a> 转化为数组</h2> <h3 id="string-prototype-split"><a href="#string-prototype-split" class="header-anchor">#</a> String.prototype.split()</h3> <p>split() 方法使用指定的分隔符字符串将一个String对象分割成子字符串数组，以一个指定的分割字串来决定每个拆分的位置。</p> <h2 id="字符串截取"><a href="#字符串截取" class="header-anchor">#</a> 字符串截取</h2> <h3 id="string-prototype-charat"><a href="#string-prototype-charat" class="header-anchor">#</a> String.prototype.charAt()</h3> <h4 id="概述"><a href="#概述" class="header-anchor">#</a> 概述</h4> <p>charAt() 方法从一个字符串中返回指定的字符。</p> <h4 id="语法"><a href="#语法" class="header-anchor">#</a> 语法</h4> <p>str.charAt(index)</p> <h4 id="参数"><a href="#参数" class="header-anchor">#</a> 参数</h4> <p>index 默认 0</p> <h3 id="string-prototype-substring"><a href="#string-prototype-substring" class="header-anchor">#</a> String.prototype.substring()</h3> <h4 id="语法-2"><a href="#语法-2" class="header-anchor">#</a> 语法</h4> <div class="language-js extra-class"><pre class="language-js"><code>str<span class="token punctuation">.</span><span class="token function">substring</span><span class="token punctuation">(</span>indexStart<span class="token punctuation">[</span><span class="token punctuation">,</span> indexEnd<span class="token punctuation">]</span><span class="token punctuation">)</span>
+</code></pre></div><h4 id="描述"><a href="#描述" class="header-anchor">#</a> 描述</h4> <p>substring 提取从 indexStart 到 indexEnd（不包括）之间的字符。
+特别地：</p> <ul><li>如果 indexStart 等于 indexEnd，substring 返回一个空字符串。</li> <li>如果省略 indexEnd，substring 提取字符一直到字符串末尾。</li> <li>如果任一参数小于 0 或为 NaN，则被当作 0。</li> <li>如果任一参数大于 stringName.length，则被当作 stringName.length。</li> <li>如果 indexStart 大于 indexEnd，则 substring 的执行效果就像两个参数调换了一样。见下面的例子。</li></ul> <h4 id="示例"><a href="#示例" class="header-anchor">#</a> 示例</h4> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">var</span> anyString <span class="token operator">=</span> <span class="token string">&quot;Mozilla&quot;</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 输出 &quot;Moz&quot;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>anyString<span class="token punctuation">.</span><span class="token function">substring</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>anyString<span class="token punctuation">.</span><span class="token function">substring</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>anyString<span class="token punctuation">.</span><span class="token function">substring</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token operator">-</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>anyString<span class="token punctuation">.</span><span class="token function">substring</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">NaN</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>anyString<span class="token punctuation">.</span><span class="token function">substring</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>anyString<span class="token punctuation">.</span><span class="token function">substring</span><span class="token punctuation">(</span><span class="token number">NaN</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 输出 &quot;lla&quot;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>anyString<span class="token punctuation">.</span><span class="token function">substring</span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">7</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>anyString<span class="token punctuation">.</span><span class="token function">substring</span><span class="token punctuation">(</span><span class="token number">7</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 输出 &quot;&quot;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>anyString<span class="token punctuation">.</span><span class="token function">substring</span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 输出 &quot;Mozill&quot;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>anyString<span class="token punctuation">.</span><span class="token function">substring</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">6</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 输出 &quot;Mozilla&quot;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>anyString<span class="token punctuation">.</span><span class="token function">substring</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">7</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>anyString<span class="token punctuation">.</span><span class="token function">substring</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/note/assets/js/app.452425e8.js" defer></script><script src="/note/assets/js/2.a421e645.js" defer></script><script src="/note/assets/js/20.16df7e3f.js" defer></script>
+  </body>
+</html>

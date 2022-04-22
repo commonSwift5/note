@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>增加 删除相关 | function</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    
+    <meta name="description" content="">
+    
+    <link rel="preload" href="/note/assets/css/0.styles.ba1ec7e7.css" as="style"><link rel="preload" href="/note/assets/js/app.452425e8.js" as="script"><link rel="preload" href="/note/assets/js/2.a421e645.js" as="script"><link rel="preload" href="/note/assets/js/10.6d977dc9.js" as="script"><link rel="prefetch" href="/note/assets/js/11.17972691.js"><link rel="prefetch" href="/note/assets/js/12.2d7de8a6.js"><link rel="prefetch" href="/note/assets/js/13.ddbd3b6b.js"><link rel="prefetch" href="/note/assets/js/14.3d85de69.js"><link rel="prefetch" href="/note/assets/js/15.68ca0a64.js"><link rel="prefetch" href="/note/assets/js/16.e8ae53a8.js"><link rel="prefetch" href="/note/assets/js/17.94115854.js"><link rel="prefetch" href="/note/assets/js/18.b71a7371.js"><link rel="prefetch" href="/note/assets/js/19.9f4a68a3.js"><link rel="prefetch" href="/note/assets/js/20.16df7e3f.js"><link rel="prefetch" href="/note/assets/js/3.d71e3132.js"><link rel="prefetch" href="/note/assets/js/4.b7d0708f.js"><link rel="prefetch" href="/note/assets/js/5.9e2f4ca7.js"><link rel="prefetch" href="/note/assets/js/6.c7b54f12.js"><link rel="prefetch" href="/note/assets/js/7.5a26e613.js"><link rel="prefetch" href="/note/assets/js/8.b9b162cd.js"><link rel="prefetch" href="/note/assets/js/9.d0eb4df8.js">
+    <link rel="stylesheet" href="/note/assets/css/0.styles.ba1ec7e7.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/note/" class="home-link router-link-active"><!----> <span class="site-name">function</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/note/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><a href="/note/basics/" class="nav-link">
+  基础
+</a></div><div class="nav-item"><a href="/note/string/" class="nav-link">
+  字符串
+</a></div><div class="nav-item"><a href="/note/array/" class="nav-link router-link-active">
+  数组
+</a></div><div class="nav-item"><a href="/note/object/" class="nav-link">
+  对象
+</a></div><div class="nav-item"><a href="/note/reg/" class="nav-link">
+  正则表达式
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/note/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><a href="/note/basics/" class="nav-link">
+  基础
+</a></div><div class="nav-item"><a href="/note/string/" class="nav-link">
+  字符串
+</a></div><div class="nav-item"><a href="/note/array/" class="nav-link router-link-active">
+  数组
+</a></div><div class="nav-item"><a href="/note/object/" class="nav-link">
+  对象
+</a></div><div class="nav-item"><a href="/note/reg/" class="nav-link">
+  正则表达式
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/note/array/array.html" aria-current="page" class="active sidebar-link">增加 删除相关</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/note/array/array.html#增加-删除相关" class="sidebar-link">增加 删除相关</a></li><li class="sidebar-sub-header"><a href="/note/array/array.html#数组合并相关方法" class="sidebar-link">数组合并相关方法</a></li><li class="sidebar-sub-header"><a href="/note/array/array.html#查找相关" class="sidebar-link">查找相关</a></li><li class="sidebar-sub-header"><a href="/note/array/array.html#数组遍历" class="sidebar-link">数组遍历</a></li><li class="sidebar-sub-header"><a href="/note/array/array.html#排序" class="sidebar-link">排序</a></li></ul></li><li><a href="/note/array/01array.html" class="sidebar-link">数组相关方法</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="增加-删除相关"><a href="#增加-删除相关" class="header-anchor">#</a> 增加 删除相关</h2> <h3 id="添加"><a href="#添加" class="header-anchor">#</a> 添加</h3> <blockquote><p>push()
+push() 方法将一个或多个元素添加到数组的末尾，并返回该数组的新长度。</p></blockquote> <blockquote><p>unshift()
+unshift() 方法将一个或多个元素添加到数组的开头，并返回该数组的新长度(该方法修改原有数组)。</p></blockquote> <h3 id="删除"><a href="#删除" class="header-anchor">#</a> 删除</h3> <blockquote><p>shift()
+shift() 方法从数组中删除第一个元素，并返回该元素的值。此方法更改数组的长度。</p></blockquote> <blockquote><p>pop()
+pop()方法从数组中删除最后一个元素，并返回该元素的值。此方法更改数组的长度。</p></blockquote> <h3 id="连接"><a href="#连接" class="header-anchor">#</a> 连接</h3> <blockquote><p>concat()
+concat() 方法用于合并两个或多个数组。此方法不会更改现有数组，而是返回一个新数组</p></blockquote> <h3 id="多个删除"><a href="#多个删除" class="header-anchor">#</a> 多个删除</h3> <p><strong>Array.prototype.splice()</strong></p> <ul><li>splice() 方法通过删除或替换现有元素或者原地添加新的元素来修改数组,并以数组形式返回被修改的内容。此方法会改变原数组。</li></ul> <h3 id="参数"><a href="#参数" class="header-anchor">#</a> 参数</h3> <ol><li>index 从哪个索引开始  参数可为负数 表示从最后几位开始删除*</li> <li>howmany 删几个 *</li> <li>item  添加</li></ol> <ul><li>返回被删除的元素组成的数组</li></ul> <h3 id="slice"><a href="#slice" class="header-anchor">#</a> slice()</h3> <p><strong>slice()</strong> 方法返回一个新的数组对象，这一对象是一个由 begin 和 end 决定的原数组的浅拷贝（包括 begin，不包括end）。原始数组不会被改变。</p> <h3 id="语法"><a href="#语法" class="header-anchor">#</a> 语法</h3> <p>arr.slice([begin[, end]])</p> <ul><li>总结用于截取数组 某些元素</li></ul> <h2 id="数组合并相关方法"><a href="#数组合并相关方法" class="header-anchor">#</a> 数组合并相关方法</h2> <h3 id="array-prototype-concat"><a href="#array-prototype-concat" class="header-anchor">#</a> Array.prototype.concat()</h3> <ul><li>concat() 方法用于合并两个或多个数组。此方法不会更改现有数组，而是返回一个新数组。</li></ul> <p>示例：</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">var</span> num1 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    num2 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    num3 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">7</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">,</span> <span class="token number">9</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+<span class="token keyword">var</span> nums <span class="token operator">=</span> num1<span class="token punctuation">.</span><span class="token function">concat</span><span class="token punctuation">(</span>num2<span class="token punctuation">,</span> num3<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>nums<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// results in [1, 2, 3, 4, 5, 6, 7, 8, 9]</span>
+</code></pre></div><h4 id="总结"><a href="#总结" class="header-anchor">#</a> 总结</h4> <p>只能首尾合并  运用扩展运算符 合并更灵活</p> <h2 id="查找相关"><a href="#查找相关" class="header-anchor">#</a> 查找相关</h2> <h3 id="array-prototype-indexof"><a href="#array-prototype-indexof" class="header-anchor">#</a> Array.prototype.indexOf()</h3> <ul><li>indexOf()方法返回在数组中可以找到一个给定元素的第一个索引，如果不存在，则返回-1。</li></ul> <h4 id="语法-2"><a href="#语法-2" class="header-anchor">#</a> 语法</h4> <ul><li>arr.indexOf(searchElement[, fromIndex])</li></ul> <div class="language-js extra-class"><pre class="language-js"><code>    <span class="token keyword">const</span> beasts <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'ant'</span><span class="token punctuation">,</span> <span class="token string">'bison'</span><span class="token punctuation">,</span> <span class="token string">'camel'</span><span class="token punctuation">,</span> <span class="token string">'duck'</span><span class="token punctuation">,</span> <span class="token string">'bison'</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>beasts<span class="token punctuation">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span><span class="token string">'bison'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// expected output: 1</span>
+    
+    <span class="token comment">// start from index 2</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>beasts<span class="token punctuation">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span><span class="token string">'bison'</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// expected output: 4</span>
+    
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>beasts<span class="token punctuation">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span><span class="token string">'giraffe'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// expected output: -1</span>
+</code></pre></div><h3 id="array-prototype-findindex"><a href="#array-prototype-findindex" class="header-anchor">#</a> Array.prototype.findIndex()</h3> <ul><li>**findIndex()**方法返回数组中满足提供的测试函数的第一个元素的索引。若没有找到对应元素则返回-1。</li></ul> <h4 id="语法-3"><a href="#语法-3" class="header-anchor">#</a> 语法</h4> <p>arr.findIndex(callback[, thisArg])</p> <h4 id="示例"><a href="#示例" class="header-anchor">#</a> 示例</h4> <div class="language-js extra-class"><pre class="language-js"><code>    <span class="token keyword">const</span> array1 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">12</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">,</span> <span class="token number">130</span><span class="token punctuation">,</span> <span class="token number">44</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    
+    <span class="token keyword">const</span> <span class="token function-variable function">isLargeNumber</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">element</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> element <span class="token operator">&gt;</span> <span class="token number">13</span><span class="token punctuation">;</span>
+    
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>array1<span class="token punctuation">.</span><span class="token function">findIndex</span><span class="token punctuation">(</span>isLargeNumber<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// expected output: 3</span>
+</code></pre></div><h4 id="indexof和findindex对比"><a href="#indexof和findindex对比" class="header-anchor">#</a> indexOf和findIndex对比</h4> <ul><li>相同点：
+<ul><li>返回都是索引</li> <li>没找到都返回-1</li></ul></li> <li>不同点 参数不同 indexOf参数为元素 findIndex参数为 函数</li></ul> <h3 id="array-prototype-find"><a href="#array-prototype-find" class="header-anchor">#</a> Array.prototype.find()</h3> <p><strong>find()</strong> 方法返回数组中满足提供的测试函数的第一个元素的值。否则返回 undefined</p> <div class="language-js extra-class"><pre class="language-js"><code>    <span class="token keyword">const</span> array1 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">12</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">,</span> <span class="token number">130</span><span class="token punctuation">,</span> <span class="token number">44</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    
+    <span class="token keyword">const</span> found <span class="token operator">=</span> array1<span class="token punctuation">.</span><span class="token function">find</span><span class="token punctuation">(</span><span class="token parameter">element</span> <span class="token operator">=&gt;</span> element <span class="token operator">&gt;</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>found<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// expected output: 12</span>
+
+</code></pre></div><h4 id="与findeindex-对比"><a href="#与findeindex-对比" class="header-anchor">#</a> 与findeIndex 对比</h4> <ul><li>相同点 参数一样</li> <li>不同 放回的值 找不到 返回的是undefined</li></ul> <h2 id="数组遍历"><a href="#数组遍历" class="header-anchor">#</a> 数组遍历</h2> <h3 id="array-prototype-foreach"><a href="#array-prototype-foreach" class="header-anchor">#</a> Array.prototype.forEach()</h3> <ul><li>forEach() 方法对数组的每个元素执行一次给定的函数。</li></ul> <div class="language- extra-class"><pre class="language-text"><code>    const array1 = ['a', 'b', 'c'];
+    
+    array1.forEach(element =&gt; console.log(element));
+    
+    // expected output: &quot;a&quot;
+    // expected output: &quot;b&quot;
+    // expected output: &quot;c&quot;
+
+</code></pre></div><h3 id="array-prototype-map"><a href="#array-prototype-map" class="header-anchor">#</a> Array.prototype.map()</h3> <p>map() 方法创建一个新数组，这个新数组由原数组中的每个元素都调用一次提供的函数后的返回值组成。
+示例</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> array1 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">9</span><span class="token punctuation">,</span> <span class="token number">16</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+<span class="token comment">// pass a function to map</span>
+<span class="token keyword">const</span> map1 <span class="token operator">=</span> array1<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token parameter">x</span> <span class="token operator">=&gt;</span> x <span class="token operator">*</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>map1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// expected output: Array [2, 8, 18, 32]</span>
+</code></pre></div><h3 id="array-prototype-every"><a href="#array-prototype-every" class="header-anchor">#</a> Array.prototype.every()</h3> <ul><li>every() 方法测试一个数组内的所有元素是否都能通过某个指定函数的测试。它返回一个布尔值。</li></ul> <blockquote><p>备注：：若收到一个空数组，此方法在一切情况下都会返回 true。</p></blockquote> <p>示例：</p> <div class="language- extra-class"><pre class="language-text"><code>const isBelowThreshold = (currentValue) =&gt; currentValue &lt; 40;
+
+const array1 = [1, 30, 39, 29, 10, 13];
+
+console.log(array1.every(isBelowThreshold));
+// expected output: true
+
+</code></pre></div><h3 id="array-prototype-some"><a href="#array-prototype-some" class="header-anchor">#</a> Array.prototype.some()</h3> <blockquote><p>some() 方法测试数组中是不是至少有1个元素通过了被提供的函数测试。它返回的是一个Boolean类型的值。</p></blockquote> <div class="language-js extra-class"><pre class="language-js"><code>    <span class="token keyword">const</span> array <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    
+    <span class="token comment">// checks whether an element is even</span>
+    <span class="token keyword">const</span> <span class="token function-variable function">even</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">element</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> element <span class="token operator">%</span> <span class="token number">2</span> <span class="token operator">===</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>array<span class="token punctuation">.</span><span class="token function">some</span><span class="token punctuation">(</span>even<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// expected output: true</span>
+
+</code></pre></div><h3 id="array-prototype-filter"><a href="#array-prototype-filter" class="header-anchor">#</a> Array.prototype.filter()</h3> <ul><li>filter() 方法创建一个新数组, 其包含通过所提供函数实现的测试的所有元素。</li></ul> <div class="language-js extra-class"><pre class="language-js"><code>    <span class="token keyword">const</span> words <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'spray'</span><span class="token punctuation">,</span> <span class="token string">'limit'</span><span class="token punctuation">,</span> <span class="token string">'elite'</span><span class="token punctuation">,</span> <span class="token string">'exuberant'</span><span class="token punctuation">,</span> <span class="token string">'destruction'</span><span class="token punctuation">,</span> <span class="token string">'present'</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    
+    <span class="token keyword">const</span> result <span class="token operator">=</span> words<span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span><span class="token parameter">word</span> <span class="token operator">=&gt;</span> word<span class="token punctuation">.</span>length <span class="token operator">&gt;</span> <span class="token number">6</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// expected output: Array [&quot;exuberant&quot;, &quot;destruction&quot;, &quot;present&quot;]</span>
+</code></pre></div><h3 id="array-prototype-reduce"><a href="#array-prototype-reduce" class="header-anchor">#</a> Array.prototype.reduce()</h3> <p>reduce() 方法对数组中的每个元素按序执行一个由您提供的 reducer 函数，每一次运行 reducer 会将先前元素的计算结果作为参数传入，最后将其结果汇总为单个返回值</p> <h4 id="参数-2"><a href="#参数-2" class="header-anchor">#</a> 参数</h4> <p>callbackFn
+一个 “reducer” 函数，包含四个参数：</p> <ul><li>previousValue：上一次调用 callbackFn 时的返回值。在第一次调用时，若指定了初始值 initialValue，其值则为 initialValue，否则为数组索引为 0 的元素 array[0]。</li> <li>currentValue：数组中正在处理的元素。在第一次调用时，若指定了初始值 initialValue，其值则为数组索引为 0 的元素 array[0]，否则为 array[1]。</li> <li>currentIndex：数组中正在处理的元素的索引。若指定了初始值 initialValue，则起始索引号为 0，否则从索引 1 起始。</li> <li>array：用于遍历的数组。</li></ul> <div class="language- extra-class"><pre class="language-text"><code>callbackfn 被调用时会传入四个参数：
+
+previousValue（前一次调用 callbackfn 得到的返回值）
+currentValue（数组中正在处理的元素）
+currentIndex（数组中正在处理的元素的索引）
+被遍历的对象 
+
+</code></pre></div><div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> array1 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 0 + 1 + 2 + 3 + 4</span>
+<span class="token keyword">const</span> initialValue <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> sumWithInitial <span class="token operator">=</span> array1<span class="token punctuation">.</span><span class="token function">reduce</span><span class="token punctuation">(</span>
+  <span class="token punctuation">(</span><span class="token parameter">previousValue<span class="token punctuation">,</span> currentValue</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> previousValue <span class="token operator">+</span> currentValue<span class="token punctuation">,</span>
+  initialValue
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>sumWithInitial<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// expected output: 10</span>
+
+</code></pre></div><h4 id="语法-4"><a href="#语法-4" class="header-anchor">#</a> 语法</h4> <div class="language- extra-class"><pre class="language-text"><code>// Arrow function
+reduce((previousValue, currentValue) =&gt; { /* ... */ } )
+reduce((previousValue, currentValue, currentIndex) =&gt; { /* ... */ } )
+reduce((previousValue, currentValue, currentIndex, array) =&gt; { /* ... */ } )
+reduce((previousValue, currentValue, currentIndex, array) =&gt; { /* ... */ }, initialValue)
+
+// Callback function
+reduce(callbackFn)
+reduce(callbackFn, initialValue)
+
+// Inline callback function
+reduce(function(previousValue, currentValue) { /* ... */ })
+reduce(function(previousValue, currentValue, currentIndex) { /* ... */ })
+reduce(function(previousValue, currentValue, currentIndex, array) { /* ... */ })
+reduce(function(previousValue, currentValue, currentIndex, array) { /* ... */ }, initialValue)
+</code></pre></div><h2 id="排序"><a href="#排序" class="header-anchor">#</a> 排序</h2> <h3 id="array-prototype-sort"><a href="#array-prototype-sort" class="header-anchor">#</a> Array.prototype.sort()</h3> <p>sort() 方法用原地算法对数组的元素进行排序，并返回数组。默认排序顺序是在将元素转换为字符串，然后比较它们的UTF-16代码单元值序列时构建的</p> <div class="language-js extra-class"><pre class="language-js"><code>    <span class="token keyword">var</span> numbers <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    numbers<span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">a<span class="token punctuation">,</span> b</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> a <span class="token operator">-</span> b<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>numbers<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    
+    也可以写成：
+    <span class="token keyword">var</span> numbers <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    numbers<span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">a<span class="token punctuation">,</span> b</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> a <span class="token operator">-</span> b<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>numbers<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="参数-3"><a href="#参数-3" class="header-anchor">#</a> 参数</h4> <p>compareFunction 可选
+用来指定按某种顺序进行排列的函数。如果省略，元素按照转换为的字符串的各个字符的Unicode位点进行排序。
+firstEl
+第一个用于比较的元素。
+secondEl
+第二个用于比较的元素。</p> <h4 id="注意点"><a href="#注意点" class="header-anchor">#</a> 注意点</h4> <p>==sort 方法会产生改变原始数组中元素顺序的副作用。 换句话说，它会改变数组的位置。 避免这种情况的一种方法是先将空数组连接到正在排序的数组上（记住 slice 和 concat 返回一个新数组），再用sort方法。==</p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><!----> <span class="next"><a href="/note/array/01array.html">
+        数组相关方法
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/note/assets/js/app.452425e8.js" defer></script><script src="/note/assets/js/2.a421e645.js" defer></script><script src="/note/assets/js/10.6d977dc9.js" defer></script>
+  </body>
+</html>
