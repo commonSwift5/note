@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<script>
+			let repeatNum = '42 42 42'
+			let reRegex = /^(\d+) \1 \1$/ // 修改这一行
+			let result = reRegex.test(repeatNum)
+			// 分组匹配的子字符串被保存到一个临时的“变量”， 可以使用同一正则表达式和反斜线及捕获组的编号来访问它
+			// （例如：\1）。 捕获组按其开头括号的位置自动编号（从左到右），从 1 开始。
+
+			// 下面的示例是匹配被空格隔开的两个相同单词：
+
+			// let repeatRegex = /(\w+) \1 \1/;
+			// repeatRegex.test(repeatStr); // Returns true
+			// repeatStr.match(repeatRegex); // Returns ["row row row", "row"]
+		</script>
+	</body>
+</html>
