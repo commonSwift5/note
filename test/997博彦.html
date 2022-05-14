@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<script>
+			// 1、按要求写出方法。
+			// 给你2个数组nums1和nums2,
+			// 变量m表示nums1数组中大于m的元素，
+			// 变量n表示nums2数组中小于n的元素
+
+			// 要求 把nums1中大于m的元素 和  nums2中的小于n的元素  合并，使合并后的数组按 递减顺序 排列并去重, 并输入指定的结果。
+			let nums1 = [{ value: 2 }, { value: 8 }, { value: 5 }, { value: 10 }, { value: -1 }, { value: 9 }],
+				m = 1,
+				nums2 = [{ value: 2 }, { value: 5 }, { value: 6 }, { value: 30 }],
+				n = 15
+			function concatArr(arr1, m, arr2, n) {
+				//在此	处写代码
+				const arr = [...arr1, ...arr2]
+				var fiarr = arr.filter(item => item.value < n && item.value > m)
+				tempArr = fiarr.sort((a, b) => b.value - a.value)
+				for (let i = 0; i < tempArr.length; i++) {
+					for (let j = i + 1; j < tempArr.length; j++) {
+						if (tempArr[i].value == tempArr[j].value) {
+							tempArr.splice(j, 1)
+							j--
+						}
+					}
+				}
+
+				return tempArr
+			}
+			let rs = concatArr(nums1, m, nums2, n)
+
+			//[
+			//   { value: 10 },
+			//   { value: 9 },
+			//   { value: 8 },
+			//   { value: 6 },
+			//   { value: 5 },
+			//   { value: 2 },
+			// ]
+
+			// 2、按要求输入打印结果。
+			// 设计一个函数，可以传入一个或多个单词的字符串，并返回该字符串，但所有五个或更多字母的单词都前后颠倒，根据参考案例在控制台输入结果。
+			// 注1：传入的字符串仅包含字母和空格
+			// 注2：仅当存在多个单词时才包含空格
+			// 例：
+			// "This is a test" => "This is a test"
+			// "hellos is another world" => "solleh is rehtona world"
+			// // 入参格式参考案例：
+			// str ="This is a test"   delay = 5
+			// / / 控制台输出情况：
+			// // > This
+			// // （过了 5 秒）
+			// // > is
+			// // （过了 5 秒）
+			// // > a
+			// // （过了 5 秒）
+			// // > test
+
+			// // 入参格式参考案例：
+			// str ="hellos is another world"   delay = 2
+			// / / 控制台输出情况：
+			// // > solleh
+			// // （过了 2 秒）
+			// // > is
+			// // （过了 2 秒）
+			// // > rehtona
+			// // （过了 2 秒）
+			// // > dlrow
+
+			async function printList(list, delay) {
+				/**
+				 * 此处写代码逻辑
+				 */
+				var arr = list.split(' ')
+				var newArr = []
+				arr.forEach(item => {
+					if (item.length >= 5) {
+						var str = item.split('').reverse().join('')
+						newArr.push(str)
+					} else {
+						newArr.push(item)
+					}
+				})
+				var i = 0
+				var t = setInterval(function () {
+					console.log(newArr[i])
+					i++
+					if (i >= newArr.length) clearInterval(t)
+				}, delay * 1000)
+			}
+
+			// printList('This is a test', 5)
+			printList('hellos is another world', 2)
+		</script>
+	</body>
+</html>

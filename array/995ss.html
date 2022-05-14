@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<script>
+			function dropElements(arr, func) {
+				for (let i = 0; i < arr.length; i++) {
+					if (func(arr[i])) {
+						return arr.slice(i)
+					}
+				}
+
+				return []
+			}
+
+			var arr = dropElements([4, 1, 2, 3, 4], function (n) {
+				return n < 3
+			})
+
+			function palindrome(str) {
+				var newStr = str.replace(/[-_\s,.]/g, '').toLowerCase()
+				console.log(newStr)
+				console.log(newStr.split('').reverse().join(''))
+				return newStr.split('').reverse().join('') == newStr ? true : false
+			}
+
+			var ac = palindrome('0_0 (: /-\ :) 0-0')
+		</script>
+	</body>
+</html>

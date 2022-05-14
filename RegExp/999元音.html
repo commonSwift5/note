@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<script>
+			function translatePigLatin(str) {
+				var yun = /^[aeiou]+/
+				var fu = /^[^aeiou]+/
+				if (yun.test(str)) {
+					newStr = str + 'way'
+				} else {
+					var ar = str.match(fu)
+					var newStr = str.slice(ar[0].length) + ar[0] + 'ay'
+					console.log(ar)
+				}
+
+				return newStr
+			}
+
+			let rs = translatePigLatin('schwartz')
+			/***
+			 *
+			 * 字符串的截取与替换
+			 *
+			 * **/
+			function myReplace(str, before, after) {
+				if (/^[A-Z]/.test(before)) {
+					after = after[0].toUpperCase() + after.slice(1)
+				} else {
+					after = after[0].toLowerCase(0) + after.slice(1)
+				}
+
+				let newStr = str.replace(before, after)
+				return newStr
+			}
+
+			myReplace('A quick brown fox jumped over the lazy dog', 'jumped', 'leaped')
+
+			function fearNotLetter(str) {
+				for (let i = 0; i < str.length; i++) {
+					var code = str.charCodeAt(i)
+					if (code == 122) return
+					if (str.charCodeAt(i + 1) !== code + 1) {
+						return String.fromCharCode(code + 1)
+					}
+				}
+			}
+
+			var rtt = fearNotLetter('abcdefghijklmnopqrstuvwxyz')
+		</script>
+	</body>
+</html>

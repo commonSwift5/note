@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<!DOCTYPE html>
+		<html lang="en">
+			<head>
+				<meta charset="UTF-8" />
+				<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+				<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+				<title>Document</title>
+			</head>
+			<body>
+				<script>
+					const array = [
+						{ value: 9 },
+						{ value: 9 },
+						{ value: 2 },
+						{ value: 3 },
+						{ value: 5 },
+						{ value: 1 },
+						{ value: 1 }
+					]
+					function tran(arr) {
+						var newArr = arr.map(item => item.value)
+						var set = new Set(newArr)
+						var b = Array.from(set).sort((a, b) => a - b)
+						return b.filter(item => item > 4 || item < 2).join('')
+					}
+					console.log(tran(array))
+
+					// 第二题
+					function strChange(title) {
+						return title.split(/\s|\-/).join('-').toLowerCase()
+					}
+					const resultStr = strChange('Hello-Books Sword A World')
+					console.log(resultStr)
+				</script>
+			</body>
+		</html>
+	</body>
+</html>

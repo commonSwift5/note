@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<script>
+			function sumFibs(num) {
+				if (num <= 0) return 0
+				var shu = 0
+				var shuArr = [1, 1]
+				while ((shu = shuArr[0] + shuArr[1]) <= num) {
+					shuArr.unshift(shu)
+				}
+				// 抽出数组中奇数相加
+				var he = shuArr.filter(item => item % 2 !== 0).reduce((a, b) => a + b)
+
+				return he
+			}
+
+			let rs = sumFibs(4)
+
+			function sumPrimes(num) {
+				if (num == 1) return 1
+
+				var zsz = []
+				while (num > 1) {
+					if (isPrimeNum(num)) {
+						zsz.push(num)
+					}
+					num--
+				}
+				console.log(zsz)
+				return zsz.reduce((a, b) => a + b)
+			}
+
+			// 判断是不是质数
+			function isPrimeNum(num) {
+				for (var i = 2; i < num / 2 + 1; i++) {
+					if (num % i == 0) {
+						return false
+					}
+				}
+				return true
+			}
+
+			let zz = sumPrimes(10)
+		</script>
+	</body>
+</html>
