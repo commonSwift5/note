@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<script>
+			// 大数加法函数 计算两个数之和
+			function solve(s, t) {
+				var arr1 = s.split('').reverse()
+				var arr2 = t.split('').reverse()
+				var length = Math.max(arr1.length, arr2.length)
+				var res = []
+				var carry = 0
+				for (var i = 0; i < length; i++) {
+					var sum = parseInt(arr1[i] || 0) + parseInt(arr2[i] || 0) + carry
+					if (sum >= 10) {
+						res.push(sum % 10)
+						carry = 1
+					} else {
+						res.push(sum)
+						carry = 0
+					}
+				}
+				if (carry === 1) {
+					res.push(1)
+				}
+				return res.reverse().join('')
+			}
+			console.log(solve('9', '99999'))
+			console.log(10 % 10)
+		</script>
+	</body>
+</html>

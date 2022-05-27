@@ -25,6 +25,29 @@
 			// 方法四Array.isArray()
 			console.log(Array.isArray(obj))
 			console.log(Array.isArray(arr))
+			//判断数组
+			function isArray(arr) {
+				return Object.prototype.toString.call(arr) === '[object Array]'
+			}
+			// 判断是否为NaN
+			function isNa(val) {
+				return typeof val === 'number' && isNaN(val)
+			}
+			// 判断是否为对象
+			function isObject(obj) {
+				return Object.prototype.toString.call(obj) === '[object Object]'
+			}
+			// 数值向下取整
+			function floor(num) {
+				return Math.floor(num)
+			}
+			// 数值向上取整
+			function ceil(num) {
+				return Math.ceil(num)
+			}
+			// 单词首字母转大写
+			function ucfirst(str) {}
+			const rs = ucfirst('hello world')
 		</script>
 	</body>
 </html>

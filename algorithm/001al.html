@@ -9,16 +9,53 @@
 	<body>
 		<!-- 001  -->
 		<script>
-			function destroyer(arr) {
-				var len = arguments.length
-				for (let i = 1; i < len; i++) {
-					arguments[0] = arguments[0].filter(item => item !== arguments[i])
+			const sourceData = [
+				{
+					Name: '北京',
+					Value: '1',
+					SubKVs: [
+						{
+							Name: '北京',
+							Value: '1-1',
+							SubKVs: [{ Value: '100000511', Name: '梨园' }]
+						}
+					]
+				},
+				{
+					Name: '福建',
+					Value: '2'
 				}
+			]
 
-				return arguments[0]
+			function transformTreeData(sourceData) {
+				var arr = []
+				sourceData.forEach(item => {
+					item.children = item.SubKVs
+					if (item.SubKVs) {
+						transformTreeData(item.SubKVs)
+					}
+					delete item.SubKVs
+					arr.push(item)
+				})
+
+				return arr
 			}
 
-			const rs = destroyer([1, 2, 3, 1, 2, 3], 2, 3) // rs =[1,1]
+			console.log(JSON.stringify(transformTreeData(sourceData), null, 2))
+			// [
+			//   {
+			//     label: '北京',
+			//     value: '1',
+			//     children: [
+			//       {
+			//         label: '北京',
+			//         value: '1-1',
+			//         children: [{ label: '梨园', value: '100000511', isLeaf: true }]
+			//       }
+			//     ]
+			//   },
+			//   { label: '福建', value: '2', isLeaf: true }
+			// ]
 		</script>
 	</body>
 </html>
