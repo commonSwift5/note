@@ -5,7 +5,7 @@
    * typeof 能判断的类型: string number boolean undefined object function 
 
    ```js
-   var a= function() { 
+   let a= function() { 
    }
     console.log(typeof '1231') //string
     console.log(typeof 1312) // number
@@ -39,4 +39,4 @@ Number()  自能放数字类型字符 ，不能放abc 否则返回NaN
 `document.write("要输出的内容")`
 `alert('要输出的内容)`
 * 输入
-`var a=  prompt("提示")`
+`let a=  prompt("提示")`

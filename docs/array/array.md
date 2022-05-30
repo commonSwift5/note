@@ -38,11 +38,11 @@ arr.slice([begin[, end]])
 
  示例：
 ```js
-var num1 = [1, 2, 3],
+let num1 = [1, 2, 3],
     num2 = [4, 5, 6],
     num3 = [7, 8, 9];
 
-var nums = num1.concat(num2, num3);
+let nums = num1.concat(num2, num3);
 
 console.log(nums);
 // results in [1, 2, 3, 4, 5, 6, 7, 8, 9]
@@ -227,14 +227,14 @@ reduce(function(previousValue, currentValue, currentIndex, array) { /* ... */ },
 ### Array.prototype.sort()
 sort() 方法用原地算法对数组的元素进行排序，并返回数组。默认排序顺序是在将元素转换为字符串，然后比较它们的UTF-16代码单元值序列时构建的
 ```js
-    var numbers = [4, 2, 5, 1, 3];
+    let numbers = [4, 2, 5, 1, 3];
     numbers.sort(function(a, b) {
       return a - b;
     });
     console.log(numbers);
     
     也可以写成：
-    var numbers = [4, 2, 5, 1, 3];
+    let numbers = [4, 2, 5, 1, 3];
     numbers.sort((a, b) => a - b);
     console.log(numbers);
 

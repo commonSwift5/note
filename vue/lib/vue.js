@@ -11,7 +11,7 @@
 
 /*  */
 
-var emptyObject = Object.freeze({});
+let emptyObject = Object.freeze({});
 
 // these helpers produces better vm code in JS engines due to their
 // explicitness and function inlining
@@ -56,7 +56,7 @@ function isObject (obj) {
 /**
  * Get the raw type string of a value e.g. [object Object]
  */
-var _toString = Object.prototype.toString;
+let _toString = Object.prototype.toString;
 
 function toRawType (value) {
   return _toString.call(value).slice(8, -1)
@@ -78,7 +78,7 @@ function isRegExp (v) {
  * Check if val is a valid array index.
  */
 function isValidArrayIndex (val) {
-  var n = parseFloat(String(val));
+  let n = parseFloat(String(val));
   return n >= 0 && Math.floor(n) === n && isFinite(val)
 }
 
@@ -98,7 +98,7 @@ function toString (val) {
  * If the conversion fails, return original string.
  */
 function toNumber (val) {
-  var n = parseFloat(val);
+  let n = parseFloat(val);
   return isNaN(n) ? val : n
 }
 
@@ -110,9 +110,9 @@ function makeMap (
   str,
   expectsLowerCase
 ) {
-  var map = Object.create(null);
-  var list = str.split(',');
-  for (var i = 0; i < list.length; i++) {
+  let map = Object.create(null);
+  let list = str.split(',');
+  for (let i = 0; i < list.length; i++) {
     map[list[i]] = true;
   }
   return expectsLowerCase
@@ -123,19 +123,19 @@ function makeMap (
 /**
  * Check if a tag is a built-in tag.
  */
-var isBuiltInTag = makeMap('slot,component', true);
+let isBuiltInTag = makeMap('slot,component', true);
 
 /**
  * Check if a attribute is a reserved attribute.
  */
-var isReservedAttribute = makeMap('key,ref,slot,slot-scope,is');
+let isReservedAttribute = makeMap('key,ref,slot,slot-scope,is');
 
 /**
  * Remove an item from an array
  */
 function remove (arr, item) {
   if (arr.length) {
-    var index = arr.indexOf(item);
+    let index = arr.indexOf(item);
     if (index > -1) {
       return arr.splice(index, 1)
     }
@@ -145,7 +145,7 @@ function remove (arr, item) {
 /**
  * Check whether the object has the property.
  */
-var hasOwnProperty = Object.prototype.hasOwnProperty;
+let hasOwnProperty = Object.prototype.hasOwnProperty;
 function hasOwn (obj, key) {
   return hasOwnProperty.call(obj, key)
 }
@@ -154,9 +154,9 @@ function hasOwn (obj, key) {
  * Create a cached version of a pure function.
  */
 function cached (fn) {
-  var cache = Object.create(null);
+  let cache = Object.create(null);
   return (function cachedFn (str) {
-    var hit = cache[str];
+    let hit = cache[str];
     return hit || (cache[str] = fn(str))
   })
 }
@@ -164,23 +164,23 @@ function cached (fn) {
 /**
  * Camelize a hyphen-delimited string.
  */
-var camelizeRE = /-(\w)/g;
-var camelize = cached(function (str) {
+let camelizeRE = /-(\w)/g;
+let camelize = cached(function (str) {
   return str.replace(camelizeRE, function (_, c) { return c ? c.toUpperCase() : ''; })
 });
 
 /**
  * Capitalize a string.
  */
-var capitalize = cached(function (str) {
+let capitalize = cached(function (str) {
   return str.charAt(0).toUpperCase() + str.slice(1)
 });
 
 /**
  * Hyphenate a camelCase string.
  */
-var hyphenateRE = /\B([A-Z])/g;
-var hyphenate = cached(function (str) {
+let hyphenateRE = /\B([A-Z])/g;
+let hyphenate = cached(function (str) {
   return str.replace(hyphenateRE, '-$1').toLowerCase()
 });
 
@@ -195,7 +195,7 @@ var hyphenate = cached(function (str) {
 /* istanbul ignore next */
 function polyfillBind (fn, ctx) {
   function boundFn (a) {
-    var l = arguments.length;
+    let l = arguments.length;
     return l
       ? l > 1
         ? fn.apply(ctx, arguments)
@@ -211,7 +211,7 @@ function nativeBind (fn, ctx) {
   return fn.bind(ctx)
 }
 
-var bind = Function.prototype.bind
+let bind = Function.prototype.bind
   ? nativeBind
   : polyfillBind;
 
@@ -220,8 +220,8 @@ var bind = Function.prototype.bind
  */
 function toArray (list, start) {
   start = start || 0;
-  var i = list.length - start;
-  var ret = new Array(i);
+  let i = list.length - start;
+  let ret = new Array(i);
   while (i--) {
     ret[i] = list[i + start];
   }
@@ -232,7 +232,7 @@ function toArray (list, start) {
  * Mix properties into target object.
  */
 function extend (to, _from) {
-  for (var key in _from) {
+  for (let key in _from) {
     to[key] = _from[key];
   }
   return to
@@ -242,8 +242,8 @@ function extend (to, _from) {
  * Merge an Array of Objects into a single Object.
  */
 function toObject (arr) {
-  var res = {};
-  for (var i = 0; i < arr.length; i++) {
+  let res = {};
+  for (let i = 0; i < arr.length; i++) {
     if (arr[i]) {
       extend(res, arr[i]);
     }
@@ -261,12 +261,12 @@ function noop (a, b, c) {}
 /**
  * Always return false.
  */
-var no = function (a, b, c) { return false; };
+let no = function (a, b, c) { return false; };
 
 /**
  * Return same value
  */
-var identity = function (_) { return _; };
+let identity = function (_) { return _; };
 
 /**
  * Generate a static keys string from compiler modules.
@@ -283,19 +283,19 @@ function genStaticKeys (modules) {
  */
 function looseEqual (a, b) {
   if (a === b) { return true }
-  var isObjectA = isObject(a);
-  var isObjectB = isObject(b);
+  let isObjectA = isObject(a);
+  let isObjectB = isObject(b);
   if (isObjectA && isObjectB) {
     try {
-      var isArrayA = Array.isArray(a);
-      var isArrayB = Array.isArray(b);
+      let isArrayA = Array.isArray(a);
+      let isArrayB = Array.isArray(b);
       if (isArrayA && isArrayB) {
         return a.length === b.length && a.every(function (e, i) {
           return looseEqual(e, b[i])
         })
       } else if (!isArrayA && !isArrayB) {
-        var keysA = Object.keys(a);
-        var keysB = Object.keys(b);
+        let keysA = Object.keys(a);
+        let keysB = Object.keys(b);
         return keysA.length === keysB.length && keysA.every(function (key) {
           return looseEqual(a[key], b[key])
         })
@@ -315,7 +315,7 @@ function looseEqual (a, b) {
 }
 
 function looseIndexOf (arr, val) {
-  for (var i = 0; i < arr.length; i++) {
+  for (let i = 0; i < arr.length; i++) {
     if (looseEqual(arr[i], val)) { return i }
   }
   return -1

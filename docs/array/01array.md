@@ -3,8 +3,8 @@
 1. 判断是不是数组
 ```js
 		// 方法一 推荐
-			var arr = [1, 2, 3]
-			var obj = { a: 1, b: 2 }
+			let arr = [1, 2, 3]
+			let obj = { a: 1, b: 2 }
 			// 推荐方法 toString()
 			console.log(Object.prototype.toString.call(arr))
 			console.log(Object.prototype.toString.call(obj))

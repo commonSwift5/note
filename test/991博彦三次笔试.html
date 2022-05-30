@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<script>
+			// 			要求：使用html编写，最后提交htm文件，自己要调试好确保能输入正确的答案，不提交html文件的和没有自己调试过运行代码的，一律按不合格处理。
+
+			// 1  编写一个函数，按下面的输入结果和输出结果编写
+			function strChange(title) {
+				//在此编写代码
+				return title.split(' ').join('-').toLowerCase()
+			}
+			const resultStr = strChange('Hello Books Sword A World')
+			console.log(resultStr) //返回"hello-books-sword-a-world
+			// 2 写一个函数，输出指定数据
+			//  输入 let arr = [{ a: 1 }, { b: 2 }, { c: 3 }, { d: 4 }, { e: 5 }, { f: 6 }, { g: 7 }]
+			// 输出 [[{a:1},{b:2},{c:3}],[{d:4}，{e:5},{f:6}],[{g:7}]]
+
+			let arr = [{ a: 1 }, { b: 2 }, { c: 3 }, { d: 4 }, { e: 5 }, { f: 6 }, { g: 7 }]
+			function finishd(list, num) {
+				let arr = []
+				let newArr = []
+				let j = list.length
+				for (let i = 1; i < list.length + 1; i++) {
+					j--
+					arr.push(list[i - 1])
+					if (i % num === 0) {
+						newArr.push(arr)
+
+						arr = []
+					}
+					if (j === 0) {
+						newArr.push(arr)
+					}
+				}
+				return newArr
+			}
+			console.log(finishd(arr, 3)) //  [[{a:1},{b:2},{c:3}],[{d:4}，{e:5},{f:6}],[{g:7}]]
+
+			// // 3. 根据输入输出的数据，写一个方法。
+			let arrOrigin = [
+				{
+					key: 1,
+					value: '战士1'
+				},
+				{
+					key: 3,
+					value: '战士3'
+				},
+				{
+					key: 2,
+					value: '战士2'
+				},
+				{
+					key: 4,
+					value: '战士4'
+				}
+			]
+			function changeFunc(arr, num) {
+				let item = arr.filter(item => item.key === num)
+				let index = arr.findIndex(item => item.key === num)
+				arr.splice(index, 1)
+				arr.unshift(...item)
+				return arr
+			}
+			let p = changeFunc(arrOrigin, 2)
+			console.log(p)
+			//p的返回值为以下数组
+			//  [
+			//   {
+			//     key: 2,
+			//     value: "战士2",
+			//   }
+			//   {
+			//     key: 1,
+			//     value: "战士1",
+			//   },
+			//   {
+			//     key: 3,
+			//     value: "战士3",
+			//   },
+			//   ,
+			//   {
+			//     key: 4,
+			//     value: "战士4",
+			//   },
+			// ]
+		</script>
+	</body>
+</html>

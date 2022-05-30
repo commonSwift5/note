@@ -29,7 +29,7 @@ substring 提取从 indexStart 到 indexEnd（不包括）之间的字符。
 * 如果 indexStart 大于 indexEnd，则 substring 的执行效果就像两个参数调换了一样。见下面的例子。
 #### 示例
 ```js
-var anyString = "Mozilla";
+let anyString = "Mozilla";
 
 // 输出 "Moz"
 console.log(anyString.substring(0,3));

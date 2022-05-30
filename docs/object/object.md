@@ -33,17 +33,17 @@ hasOwnProperty() 方法会返回一个布尔值，指示对象自身属性中是
  示例：
 #### 语法 
 ```js
-for (variable in object)
+for (letiable in object)
   statement
 ```  
-> **variable**
-在每次迭代时，variable会被赋值为不同的属性名。
+> **letiable**
+在每次迭代时，letiable会被赋值为不同的属性名。
 **object**
 非Symbol类型的可枚举属性被迭代的对象。
 ```js
-    var obj = {a:1, b:2, c:3};
+    let obj = {a:1, b:2, c:3};
     
-    for (var prop in obj) {
+    for (let prop in obj) {
       console.log("obj." + prop + " = " + obj[prop]);
     }
     
@@ -62,15 +62,15 @@ for (variable in object)
     #### 示例
     ```js
     // simple array
-    var arr = ['a', 'b', 'c'];
+    let arr = ['a', 'b', 'c'];
     console.log(Object.keys(arr)); // console: ['0', '1', '2']
     
     // array like object
-    var obj = { 0: 'a', 1: 'b', 2: 'c' };
+    let obj = { 0: 'a', 1: 'b', 2: 'c' };
     console.log(Object.keys(obj)); // console: ['0', '1', '2']
     
     // array like object with random key ordering
-    var anObj = { 100: 'a', 2: 'b', 7: 'c' };
+    let anObj = { 100: 'a', 2: 'b', 7: 'c' };
     console.log(Object.keys(anObj)); // console: ['2', '7', '100']
 
 ```

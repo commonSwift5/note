@@ -21,11 +21,11 @@
 			function concatArr(arr1, m, arr2, n) {
 				//在此	处写代码
 				const arr = [...arr1, ...arr2]
-				var fiarr = arr.filter(item => item.value < n && item.value > m)
-				tempArr = fiarr.sort((a, b) => b.value - a.value)
+				let friar = arr.filter(item => item.value < n && item.value > m)
+				let tempArr = friar.sort((a, b) => b.value - a.value)
 				for (let i = 0; i < tempArr.length; i++) {
 					for (let j = i + 1; j < tempArr.length; j++) {
-						if (tempArr[i].value == tempArr[j].value) {
+						if (tempArr[i].value === tempArr[j].value) {
 							tempArr.splice(j, 1)
 							j--
 						}
@@ -35,6 +35,7 @@
 				return tempArr
 			}
 			let rs = concatArr(nums1, m, nums2, n)
+            console.log(rs)
 
 			//[
 			//   { value: 10 },
@@ -78,17 +79,17 @@
 				/**
 				 * 此处写代码逻辑
 				 */
-				var arr = list.split(' ')
-				var newArr = []
+				let arr = list.split(' ')
+				let newArr = []
 				arr.forEach(item => {
 					if (item.length >= 5) {
-						var str = item.split('').reverse().join('')
+						let str = item.split('').reverse().join('')
 						newArr.push(str)
 					} else {
 						newArr.push(item)
 					}
 				})
-				var i = 0
+				let i = 0
 				var t = setInterval(function () {
 					console.log(newArr[i])
 					i++
